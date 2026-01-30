@@ -1,4 +1,4 @@
-# 🎓 University Portal Website
+# 🎓 Salok University
 
 A full-stack **University Portal Website** designed to digitalize and streamline university operations for **Students, Teachers, and Administrators**.  
 The platform focuses on **transparency, security, and scalability**, with blockchain integration for attendance management.
