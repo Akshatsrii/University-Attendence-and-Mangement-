@@ -1,0 +1,169 @@
+/* =========================
+   FOOTER – ENHANCED DESIGN
+   ========================= */
+
+.footer {
+  background: linear-gradient(135deg, #0a0a0b, #090a0e);
+  color: #cbd5e1;
+  padding: 80px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glow */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 300px;
+  height: 300px;
+  background: rgba(8, 8, 8, 0.15);
+  filter: blur(120px);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   LOGO / BRAND
+   ========================= */
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #ff9f1c;
+  margin-bottom: 16px;
+}
+
+.footer-col p {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #94a3b8;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ffffff;
+  position: relative;
+}
+
+/* underline accent */
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: #ff9f1c;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  font-size: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 12px;
+}
+
+/* arrow hover effect */
+.footer-col ul li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #ff9f1c;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.footer-col ul li:hover {
+  color: #ff9f1c;
+  transform: translateX(6px);
+}
+
+.footer-col ul li:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   CONTACT INFO
+   ========================= */
+
+.footer-col p strong {
+  color: #ffffff;
+}
+
+/* =========================
+   BOTTOM BAR
+   ========================= */
+
+.footer-bottom {
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 22px 0;
+  font-size: 13px;
+  color: #94a3b8;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .footer-col h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-col ul li {
+    padding-left: 0;
+  }
+
+  .footer-col ul li::before {
+    display: none;
+  }
+}

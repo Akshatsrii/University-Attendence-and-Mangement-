@@ -1,0 +1,73 @@
+/* =========================
+   THEME VARIABLES
+   ========================= */
+
+/* DARK MODE */
+body.dark {
+  --bg-main: #020617;
+  --bg-secondary: #0f172a;
+  --bg-card: #111827;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --accent: #ff9f1c;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* LIGHT MODE */
+body.light {
+  --bg-main: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+
+  --text-main: #111827;
+  --text-muted: #6b7280;
+
+  --accent: #ff9f1c;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   APPLY GLOBALLY
+   ========================= */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+section {
+  background: var(--bg-main);
+}
+
+/* Cards */
+.card,
+.testimonial-card,
+.footer,
+.box {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+
+/* Text */
+p {
+  color: var(--text-muted);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-main);
+}
+
+/* Accent */
+span,
+.highlight {
+  color: var(--accent);
+}

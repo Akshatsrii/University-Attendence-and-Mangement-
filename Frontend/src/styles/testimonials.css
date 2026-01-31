@@ -1,0 +1,160 @@
+/* =========================
+   TESTIMONIAL SECTION
+   ========================= */
+
+.testimonial-section {
+  background: #ffffff;
+  padding: 90px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.testimonial-tag {
+  color: #ff9f1c;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 64px;
+}
+
+.testimonial-section h2 {
+  font-size: 38px;
+  color: #111;
+  margin: 10px 0 50px;
+}
+
+.testimonial-section h2 span {
+  color: #ff9f1c;
+}
+
+/* =========================
+   SLIDER WRAPPER
+   ========================= */
+
+.testimonial-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   MOVING TRACK (TRUE INFINITE)
+   ========================= */
+
+.testimonial-cards {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: infiniteScroll 22s linear infinite;
+}
+
+/* Hover → pause */
+.testimonial-slider:hover .testimonial-cards {
+  animation-play-state: paused;
+}
+
+/* =========================
+   CARD (ENHANCED DESIGN)
+   ========================= */
+
+.testimonial-card {
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  width: 300px;
+  padding: 30px 28px;
+  border-radius: 22px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  position: relative;
+  margin-right: 32px;          /* 🔥 replaces gap */
+  flex-shrink: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+/* Rating badge */
+.testimonial-card::after {
+  content: "99";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: linear-gradient(135deg, #ff9f1c, #ffb703);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 50%;
+}
+
+/* Stars */
+.testimonial-stars {
+  color: #ffb703;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+/* Text */
+.testimonial-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* User */
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 14px;
+}
+
+.testimonial-user img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-user h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #111;
+}
+
+.testimonial-user span {
+  font-size: 12px;
+  color: #ff9f1c;
+  font-weight: 600;
+}
+
+/* =========================
+   TRUE INFINITE LOOP (NO DELAY)
+   ========================= */
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .testimonial-cards {
+    animation-duration: 35s;
+  }
+
+  .testimonial-card {
+    width: 260px;
+    margin-right: 24px;
+  }
+}
